@@ -13,14 +13,14 @@ on:
 jobs:
   test-ping:
     runs-on: ubuntu-latest
-    name: test ping test exectuor
+    name: check connection
     steps:
-      -  name: test
-         run: curl https://executor-test.kobiton.com/ping
+      -  name: test curl
+         run: curl ${{inputs.url}}
         
   run-test:
     runs-on: ubuntu-latest
-    name: GA
+    name: Run Testing
     steps:
       - uses: actions/checkout@v3
       - uses: loiluong-kobiton/execute-appium-test-github-action@main
