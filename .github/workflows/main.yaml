@@ -16,7 +16,7 @@ jobs:
     name: check connection
     steps:
       -  name: test curl
-         run: curl ${{inputs.url}}
+         run: curl ${{inputs.url}}/ping
         
   run-test:
     runs-on: ubuntu-latest
