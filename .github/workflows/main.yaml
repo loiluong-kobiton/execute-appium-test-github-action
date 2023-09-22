@@ -1,3 +1,4 @@
+name: Test Executor Appium
 on:
   workflow_dispatch:
     inputs:
@@ -20,7 +21,7 @@ jobs:
         
   run-test:
     runs-on: ubuntu-latest
-    name: Run Testing
+    name: Run Testing on ${{inputs.url}}
     steps:
       - uses: actions/checkout@v3
       - uses: loiluong-kobiton/execute-appium-test-github-action@main
