@@ -33,7 +33,7 @@ jobs:
           executor_password: K0bit0n@2019 # get this from our support team
           # git_repo_url: https://github.com/huyvankobiton/azure-devops-automation-java-demo.git
           # git_repo_branch: main
-          git_repo_url: https://github.com/loiluong-kobiton/azure-devops-automation-java-demo.git
+          git_repo_url: https://github.com/huyvankobiton/azure-devops-automation-java-demo.git
           git_repo_branch: main
 #           git_repo_ssh_key: ${{ secrets.GIT_REPO_SSH_KEY }}
           # app_id: 'kobiton-store:v624080' // app-id
