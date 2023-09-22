@@ -5,11 +5,11 @@ on:
       url:
         description: 'where to test ?'
         required: true
-        default: 'https://executor-demo.kobiton.com'
+        default: '/executor-demo.kobiton.com'
         type: choice
         options:
-          - 'https://executor-test.kobiton.com'
-          - 'https://executor-demo.kobiton.com'
+          - 'executor-test.kobiton.com'
+          - 'executor-demo.kobiton.com'
 
 jobs:
   test-ping:
@@ -17,7 +17,7 @@ jobs:
     name: check connection
     steps:
       -  name: test curl
-         run: curl ${{inputs.url}}/ping
+         run: curl https://${{inputs.url}}/ping
         
   run-test:
     runs-on: ubuntu-latest
@@ -28,12 +28,12 @@ jobs:
         with:
           kobi_username: kobitonadmin+businesscloud
           kobi_api_key: 884f4fc8-3fbe-42d0-90f3-3fa706d6554a
-          executor_url: ${{inputs.url}} # get this from our support team
+          executor_url: https://${{inputs.url}} # get this from our support team
           executor_username: kobiton-demo # get this from our support team
           executor_password: K0bit0n@2019 # get this from our support team
           # git_repo_url: https://github.com/huyvankobiton/azure-devops-automation-java-demo.git
           # git_repo_branch: main
-          git_repo_url: https://github.com/huyvankobiton/azure-devops-automation-java-demo.git
+          git_repo_url: https://github.com/loiluong-kobiton/azure-devops-automation-java-demo.git
           git_repo_branch: main
 #           git_repo_ssh_key: ${{ secrets.GIT_REPO_SSH_KEY }}
           # app_id: 'kobiton-store:v624080' // app-id
